@@ -1,0 +1,12 @@
+baseurl = "http://rakeshtejra.github.io/myspf/"
+languageCode = "en-us"
+title = "CloudShark"
+copyright = "Copyright (c) 2015 - 2020, Carlito Brigante; all rights reserved."
+MetaDataFormat = "yaml"
+
+[author]
+  name = "Carlito Brigante"
+
+[indexes]
+  tag = "tags"
+  topic = "topics"
