@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws on CloudShark</title>
+    <link>http://localhost:1313/myspf/tags/aws/</link>
+    <description>Recent content in Aws on CloudShark</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2015 - 2020, Carlito Brigante; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 14 Oct 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/myspf/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Benchmarking Cloudfront (and S3)</title>
+      <link>http://localhost:1313/myspf/post/benchmarking-cloudfront-and-s3</link>
+      <pubDate>Wed, 14 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/myspf/post/benchmarking-cloudfront-and-s3</guid>
+      <description>
+
+
+&lt;figure class=&#34;right third&#34;&gt;
+    
+        &lt;img src=&#34;http://localhost:1313/myspf/media/amazon-logo.jpg&#34;  /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;a href=&#34;http://amazon.com/&#34; title=&#34;Amazon&#34;&gt;Amazon&lt;/a&gt; has done it again bringing another
+computing service to the masses. This time it’s the Content Delivery
+Network
+or &lt;a href=&#34;http://en.wikipedia.org/wiki/Content_delivery_network&#34; title=&#34;Content delivery network&#34;&gt;CDN&lt;/a&gt;.
+Cloudfront is a direct competitor to other popular CDNs such
+as &lt;a href=&#34;http://www.akamai.com&#34; title=&#34;Akamai&#34;&gt;Akamai&lt;/a&gt;. While Akamai requires a
+fairly substantial amount of traffic to become a customer, Cloudfront
+doesn’t. It follows all of Amazons, pay for what you use mentality. This
+means that everyone can benefit from incorporating Cloudfront into their
+blog, site, store, etc..&lt;/p&gt;
+
+&lt;p&gt;For purposes of experimentation, I decided to track how much of a
+difference Amazons Cloudfront made over
+simple &lt;a href=&#34;http://aws.amazon.com/s3&#34; title=&#34;Amazon S3&#34;&gt;s3&lt;/a&gt; public hosting vs
+hosting locally on my webhost. I decided to
+use&lt;a href=&#34;http://stevefrancia.com&#34;&gt;stevefrancia.com&lt;/a&gt; for this experiment since
+it is a very small and simple site with a single html file a couple css
+and js files and a handful of images. No server side processing or other
+significant variables, perfect for benchmarking.&lt;/p&gt;
+
+&lt;p&gt;The next series of images shows the improvement as I moved towards all
+files (except the primary html file) on cloudfront.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note, the scale of the following images isn’t the same from one to the
+other, please note the x-axis scale for each one&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;base-case:5ded579301d0c6b174408b9b0118591b&#34;&gt;Base Case&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/spf13/4177408474/&#34; title=&#34;Base Case by steve.francia, on Flickr&#34;&gt;&lt;img src=&#34;http://localhost:1313/myspf/media/4177408474_84b5bc017b.jpg&#34; alt=&#34;Base
+Case&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;google-hosted-jquery:5ded579301d0c6b174408b9b0118591b&#34;&gt;Google Hosted jQuery&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/spf13/4177410024/&#34; title=&#34;Google Hosted jQuery by steve.francia, on Flickr&#34;&gt;&lt;img src=&#34;http://localhost:1313/myspf/media/4177410024_2403c41158.jpg&#34; alt=&#34;Google Hosted
+jQuery&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;resources-on-s3:5ded579301d0c6b174408b9b0118591b&#34;&gt;Resources on S3&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/spf13/4176659019/&#34; title=&#34;s3 hosted by steve.francia, on Flickr&#34;&gt;&lt;img src=&#34;http://localhost:1313/myspf/media/4176659019_e2ef2ff41c.jpg&#34; alt=&#34;s3
+hosted&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;resources-on-cloudfront:5ded579301d0c6b174408b9b0118591b&#34;&gt;Resources on Cloudfront&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/spf13/4177419138/&#34; title=&#34;cloudfront by steve.francia, on Flickr&#34;&gt;&lt;img src=&#34;http://localhost:1313/myspf/media/4177419138_25deb10527.jpg&#34; alt=&#34;cloudfront&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;summary:5ded579301d0c6b174408b9b0118591b&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/spf13/4176646691/&#34; title=&#34;cloudfront-comparison by steve.francia, on Flickr&#34;&gt;&lt;img src=&#34;http://localhost:1313/myspf/media/4176646691_5ffb9216b5_o.png&#34; alt=&#34;cloudfront-comparison&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion:5ded579301d0c6b174408b9b0118591b&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Cloudfront is a significant improvement over both my web host as well as
+serving files directly from s3. Each case the single HTML file was
+served from my web host. When you remove that from the totals (assuming
+an average of .5 s for the index.html file) it shows an even larger
+improvement. From just under 4 seconds in our base case, to around .4
+seconds on cloudfront. Using cloudfront is easy and
+inexpensive. &lt;a href=&#34;http://aws.amazon.com/cloudfront/&#34; title=&#34;CloudFront&#34;&gt;CloudFront&lt;/a&gt;
+integration is a no brainer. It works well, easily integrates and is
+inexpensive. Most people should use it to host all of their resources.&lt;/p&gt;
+
+&lt;p&gt;Of course this is a very small scale test and your mileage will vary,
+pingdom is a good resource for simple tests like this as it produces the
+graphs seen above and is easy to use.&lt;/p&gt;
+
+&lt;h2 id=&#34;related-articles:5ded579301d0c6b174408b9b0118591b&#34;&gt;Related articles&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://aws.typepad.com/aws/2010/05/amazon-cloudfront-supports-streaming-access-logs.html&#34;&gt;Amazon CloudFront Now Supports Streaming Access
+Logs&lt;/a&gt;
+(aws.typepad.com)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://aws.typepad.com/aws/2010/05/improving-global-application-performance.html&#34;&gt;Improving Global Application
+Performance&lt;/a&gt;
+(aws.typepad.com)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://teabreak.pk/how-to-configure-amazon-cloudfront-streaming-log-with-cloudberry-explorer-280/36329/&#34;&gt;How to configure Amazon CloudFront Streaming log with CloudBerry
+Explorer&lt;/a&gt;
+(teabreak.pk)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
